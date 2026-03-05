@@ -13,3 +13,6 @@ pip install -r requirements.txt
 ## 示例代码
 * [调用DeepSeek API](deepseek_api)
   * [简单对话](deepseek_api/chat.py)
+* [LangChain框架](langchain)
+  * [简单对话](langchain/chat.py)：LLM集成
+  * [天气预报Agent](langchain/weather_agent.py)：Agent+工具调用
