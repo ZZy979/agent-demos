@@ -16,3 +16,4 @@ pip install -r requirements.txt
 * [LangChain框架](langchain)
   * [简单对话](langchain/chat.py)：LLM集成
   * [天气预报Agent](langchain/weather_agent.py)：Agent+工具调用
+  * [SQL Agent](langchain/sql_agent/sql_agent.py)：SQL查询Agent
