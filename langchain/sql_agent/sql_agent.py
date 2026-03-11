@@ -20,7 +20,7 @@ for tool in tools:
     print(f'{tool.name}: {tool.description}')
 
 # Create the agent
-system_prompt = '''
+system_prompt = """
 You are an agent designed to interact with a SQL database.
 Given an input question, create a syntactically correct {dialect} query to run,
 then look at the results of the query and return the answer. Unless the user
@@ -41,7 +41,7 @@ To start you should ALWAYS look at the tables in the database to see what you
 can query. Do NOT skip this step.
 
 Then you should query the schema of the most relevant tables.
-'''.format(
+""".format(
     dialect=db.dialect,
     top_k=5,
 )
