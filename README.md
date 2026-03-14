@@ -18,3 +18,4 @@ pip install -r requirements.txt
   * [天气预报Agent](langchain/weather_agent.py)：Agent+工具调用
   * [SQL Agent](langchain/sql_agent/sql_agent.py)：SQL查询Agent
   * [网页检索Agent](langchain/webpage_retrieval_agent.py)：Agentic RAG
+  * [PDF搜索引擎](langchain/knowledge_base/pdf_search_engine.py)：构建知识库+语义搜索
