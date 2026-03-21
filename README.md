@@ -37,3 +37,8 @@ python chat.py
 * [网页检索Agent](langchain/rag/webpage_retrieval_agent.py)：Agentic RAG
 * [网站内容问答聊天机器人](langchain/rag/website_qa_chatbot.py)：RAG Agent
 * [LangGraph文档查询Agent](langchain/rag/langgraph_doc_agent.py)：Agentic RAG
+
+#### MCP
+* [数学计算MCP服务器](langchain/mcp/math_server.py)
+* [天气查询MCP服务器](langchain/mcp/weather_server.py)
+* [MCP客户端Agent](langchain/mcp/mcp_agent.py)
