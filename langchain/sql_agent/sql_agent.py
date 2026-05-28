@@ -6,7 +6,7 @@ from langchain_community.utilities import SQLDatabase
 # https://docs.langchain.com/oss/python/langchain/sql-agent
 
 # Initialize an LLM
-model = init_chat_model('deepseek-chat')
+model = init_chat_model('deepseek-v4-flash', extra_body={'thinking': {'type': 'disabled'}})
 
 # Get the database, store it locally
 # https://www.sqlitetutorial.net/wp-content/uploads/2018/03/chinook.zip

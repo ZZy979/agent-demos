@@ -2,6 +2,7 @@ import re
 
 import requests
 from langchain.agents import create_agent
+from langchain.chat_models import init_chat_model
 from langchain.messages import HumanMessage
 from langchain.tools import tool
 
@@ -20,8 +21,9 @@ system_prompt = """
 Use fetch_url when you need to fetch information from a web-page; quote relevant snippets.
 """
 
+model = init_chat_model('deepseek-v4-flash', extra_body={'thinking': {'type': 'disabled'}})
 agent = create_agent(
-    model='deepseek-chat',
+    model=model,
     tools=[fetch_url], # A tool for retrieval
     system_prompt=system_prompt,
 )

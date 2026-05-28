@@ -3,8 +3,9 @@ from langchain_deepseek import ChatDeepSeek
 
 # 初始化DeepSeek模型
 llm = ChatDeepSeek(
-    model='deepseek-chat',
-    temperature=0
+    model='deepseek-v4-flash',
+    temperature=0,
+    extra_body={'thinking': {'type': 'disabled'}}
 )
 
 messages = [

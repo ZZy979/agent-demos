@@ -11,7 +11,8 @@ headers = {
 }
 
 data = {
-    'model': 'deepseek-chat',  # DeepSeek-V3.2的非思考模式
+    'model': 'deepseek-v4-flash',
+    'thinking': {'type': 'disabled'},  # 关闭思考模式
     'messages': [
         {'role': 'system', 'content': '你是一个专业的AI助手'},
         {'role': 'user', 'content': '请用一句话解释什么是量子计算'}

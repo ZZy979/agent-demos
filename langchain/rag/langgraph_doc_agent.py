@@ -48,7 +48,7 @@ Your answers should be clear, concise, and technically accurate.
 
 tools = [fetch_documentation]
 
-model = init_chat_model('deepseek-chat')
+model = init_chat_model('deepseek-v4-flash', extra_body={'thinking': {'type': 'disabled'}})
 
 agent = create_agent(
     model=model,

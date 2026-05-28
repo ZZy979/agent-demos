@@ -1,6 +1,7 @@
 import asyncio
 
 from langchain.agents import create_agent
+from langchain.chat_models import init_chat_model
 from langchain_mcp_adapters.client import MultiServerMCPClient
 
 
@@ -20,7 +21,8 @@ async def main():
     })
 
     tools = await client.get_tools()
-    agent = create_agent('deepseek-chat', tools)
+    model = init_chat_model('deepseek-v4-flash', extra_body={'thinking': {'type': 'disabled'}})
+    agent = create_agent(model, tools)
 
     math_response = await agent.ainvoke(
         {'messages': [{'role': 'user', 'content': 'What is (3 + 5) * 12?'}]}
