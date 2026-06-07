@@ -5,7 +5,7 @@ from langchain.tools import tool
 from langchain.messages import HumanMessage
 from markdownify import markdownify
 
-ALLOWED_DOMAINS = ["https://langchain-ai.github.io/"]
+ALLOWED_DOMAINS = ['https://langchain-ai.github.io/', 'https://docs.langchain.com']
 LLMS_TXT = 'https://langchain-ai.github.io/langgraph/llms.txt'
 
 
@@ -15,7 +15,6 @@ def fetch_documentation(url: str) -> str:
     if not any(url.startswith(domain) for domain in ALLOWED_DOMAINS):
         return f"Error: URL not allowed. Must start with one of: {', '.join(ALLOWED_DOMAINS)}"
     response = requests.get(url, timeout=10.0)
-    response.raise_for_status()
     return markdownify(response.text)
 
 
